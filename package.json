@@ -1,0 +1,12 @@
+{
+    "ltId": "17294272843",
+    "packageName": "MdLt",
+    "packageType": "module",
+    "version": "1.3.5",
+    "isPublished": null,
+    "readme": "",
+    "languageUsed": "php, html, css, javascript, liferazor",
+    "dependsOn": [],
+    "description": "MdLt is the core application framework of LifeTechOCMS. It provides the foundational classes, functions, and services that enable modules, themes, and plugins to interact with the LifeTechOCMS system.\n\nMdLt supports essential framework operations, including routing, HTTP request handling, API responses, database interactions, session management, authentication, and other shared utilities.",
+    "ltVersion": "2.7.4"
+}
