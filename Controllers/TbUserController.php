@@ -188,6 +188,20 @@ class TbUserController
           if(empty($current)) return LtResponse::json('You must provide your current password to proceed.', 3006, 100);
           
           if($password !== $confirm) return LtResponse::json('the password and confirm password fields are not the same. ensure both fields match', 3007, 100);
+          
+                  
+        // 2. Validate input fields
+        if (empty($password) || empty($confirm)) {
+            return LtResponse::json('password and confirm fields are required.', 3008, 100);
+        }
+    
+        if (strlen($password) < 8) {
+            return LtResponse::json('New password must be at least 8 characters long.', 3008, 100);
+        }
+    
+        if ($current === $password) {
+            return LtResponse::json('New password must be different from current password.', 3008, 100);
+        }
 
 
             $auth = json_decode(LtAuth::loginWithId($ltId, $current));

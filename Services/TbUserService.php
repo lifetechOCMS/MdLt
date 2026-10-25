@@ -44,7 +44,7 @@ class TbUserService
             $model->updatedBy = $this->userId;
             $model->password = $encrypt;
             $model->salt = $salt;
-            $model->formType = 'userForm';
+            $model->formType = $model->formName;
             $model->createdAt = $this->ltNow;
             $model->updatedAt = $this->ltNow;
             
