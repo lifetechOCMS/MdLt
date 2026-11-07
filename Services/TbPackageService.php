@@ -702,7 +702,10 @@ LICENSE;
             
             if(class_exists('\ImportLtClass')) {
                 $instance = new \ImportLtClass();
-                $instance->exportPackageAbstract($packageName, $packageType, $useSourceCode, $exportAction, $selectedTables, $bumpVersion);
+               $response = $instance->exportPackageAbstract($packageName, $packageType, $useSourceCode, $exportAction, $selectedTables, $bumpVersion);
+               if($response){
+                   return $response;
+               }
             } else {
                 $msg =  LtResponse::json("ImportLtClass does not exist", '3322', '100');
                 return $msg;
@@ -997,7 +1000,8 @@ LICENSE;
                     ':contentType'   => 'theme',
                     ':publishSource' => 'region'
                 ]);
-        
+                
+                
                 // 6. Apply 'Default.html' and package name to non-theme pages and to only page type theme
                 $stmtUpdatePages = $this->sqlConnect->prepare("
                     UPDATE tb_page 
