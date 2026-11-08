@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "ltId": "177927424740853",
+        "packageName": "MdLt",
+        "menuLevel": 1,
+        "menuName": "Dashboard",
+        "contentName": "Dashboard.html",
+        "parentMenuId": "",
+        "routePath": "\/user-dashboard",
+        "slug": null,
+        "target": "_blank",
+        "sortOrder": null,
+        "updatedAt": "2026-09-08 01:35:16",
+        "c81e728d9d4c2f": 0,
+        "accbc87e4b5ce2": 0,
+        "ri3wqzb4sc1v": 1,
+        "w0srn68uzbap": 0,
+        "20dou7ay4gfp": 0
+    }
+]

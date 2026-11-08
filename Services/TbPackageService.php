@@ -471,6 +471,7 @@ LICENSE;
                     'type'              => $remotePkg['packageType'] ?? 'module',
                     'approvalStatus'    => $remotePkg['approvalStatus'] ?? 'review',
                     'payment'           => $remotePkg['paymentCategory'] ?? 'free',
+                    'downloadCount'     => $remotePkg['totalDownload'] ?? 0,
                     'price'             => $remotePkg['productPrice'] ?? 0, // depends on if payment is free or paid if is paid it will display the price tag else free
                     'dependency'        => json_decode($remotePkg['dependency']) ?? [], // depends on array with e.g [packageName => 'name', version => '1.12.3']
                     'latestVersion'     => $remoteVersion,
